@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Room</title>
+    <script type="text/javascript">
+      const apiKey = '<%=apiKey %>';
+      const sessionId = '<%=sessionId %>';
+      const token = '<%=token %>';
+      const pinCode = '<%=pinCode %>';
+      const conferenceNumber = '<%=conferenceNumber %>';
+      // let connectionId;
+      // const dialOut = () => {
+      //   fetch(`/dial-out?roomId=${roomId}`)
+      //     .then((response) => response.json())
+      //     .then((sipData) => {
+      //       connectionId = sipData.connectionId;
+      //     })
+      //     .catch((error) => {
+      //       alert(`There was an error dialing-out`);
+      //     });
+      // };
+      // const hangUp = () => {
+      //   fetch(`/hang-up?roomId=${roomId}`)
+      //     .then((response) => response)
+      //     .then((data) => {
+      //       console.log('dial-out-hang-up-complete');
+      //     })
+      //     .catch((error) => {
+      //       alert(`There was an error hanging up`);
+      //     });
+      // };
+    </script>
+    <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+  </head>
+  <body>
+    <div id="publisher"></div>
+    <div id="subscribers"></div>
+    <button id="dial-out">
+      Click here to dial-out to the Nexmo Conference
+    </button>
+    <button id="hang-up">Click here to hang-up</button>
+    <div>Conference Number: <%=conferenceNumber %></div>
+    <div>Pin Code: <%=pinCode %></div>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
